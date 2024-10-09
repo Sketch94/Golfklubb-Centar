@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../media/golfball.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/golfklubb.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Golfklubb</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Välkommen till Golfklubb Centar</h1>
+    </header>
+
+    <nav>
+        <div class="menu" onclick="toggleMenu()">
+            <div class="top"></div>
+            <div class="middle"></div>
+            <div class="bottom"></div>
+        </div>
+
+        <div class="dropdown-content" id="menu">
+            <ul>
+                <li><a href="golfklubb.html">Start</a></li>
+                <li><a href="om-oss.html">Om oss</a></li>
+                <li><a href="boka.html">Boka tid</a></li>
+                <li><a href="medlem.html">Medlem</a></li>
+                <li><a href="restuarang-shop.html">Restaurang & Shop</a></li>
+                <li><a href="tavlingar.html">Tävlingar</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="news">
+        <h2>Nyheter</h2>
+        <p>Håll dig uppdaterad med vad som händer på klubben.</p>
+
+        <article class="new">
+            <h3>Klubbmästerskap 2024/25</h3>
+
+            <img src="../media/golf.jpg" alt="Man som spelar Golf">
+            <a href="nyheter.html" class="btn">Se alla nyheter</a>
+            </p>
+
+        </article>
+
+
+        <article class="new">
+            <h3>Vår restaurang meny</h3>
+            <p>Kom och upptäck våra nya rätter! En perfekt avslutning efter en golfrunda.</p>
+            <img src="../media/food.jpg" alt="En gaffel med spaghetti och en körsbärstomat">
+            <a href="meny.html" class="btn">Läs mer vårt utbud</a>
+        </article>
+
+
+        <article class="new">
+            <h3>Öppettider</h3>
+            <p>Från och med 1 november ändrar vi våra öppettider för vintersäsongen. Vänligen besök vår kontaktsektion
+                för mer
+                information. <br> <br> Våra öppettider</p>
+
+            <ul>
+                <li>Mån - Tors: 08:00 - 18:00</li>
+                <li>Fre - Sön: 08:00 - 19:00</li>
+
+            </ul>
+
+        </article>
+
+
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+
+    <script>
+        const menu = document.querySelector('.menu');
+        menu.addEventListener('click', function () {
+            menu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>
