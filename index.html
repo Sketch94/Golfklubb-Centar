@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="sv-SV">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../media/golfball.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <title>Golfklubb Horizon</title>
+</head>
+
+
+<body>
+
+    <header>
+        <nav aria-label="Huvudmeny">
+            <div class="menu" onclick="toggleMenu()">
+                <div class="top"></div>
+                <div class="middle"></div>
+                <div class="bottom"></div>
+            </div>
+            <nav>
+                <h1>Välkommen till Golfklubb Horizon
+                    <p>Där passion möter perfektion! Upptäck en värld av golfglädje med banor i toppklass och en
+                        gemenskap
+                        som strävar efter
+                        att förbättra varje sving. Oavsett om du är nybörjare eller erfaren golfare, har vi något för
+                        dig.
+                    </p>
+                </h1>
+            </nav>
+
+    </header>
+
+    <main>
+        <nav>
+            <div class="dropdown-content" id="menu">
+                <ul>
+                    <li><a href="../html/index.html">Start</a></li>
+                    <li><a href="../html/om-oss.html">Om oss</a></li>
+                    <li><a href="../html/boka.html">Boka tid</a></li>
+                    <li><a href="../html/tavlingar.html">Tävlingar & evenemang</a></li>
+                    <li><a href="../html/medlem.html">Medlem</a></li>
+                    <li><a href="../html/kontakt.html">Kontakt & besök</a></li>
+                    <li><a href="../html/restaurang-shop.html">Restaurang & Shop</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="news">
+            <div class="image-gallery">
+                <img src="../media/startpage-header.jpg" alt="Bild på en golfplats.">
+            </div>
+
+            <h2>Nyheter</h2>
+            <hr>
+            <article class="new">
+                <h3>Klubbmästerskap 2024/25</h3>
+                <p>Klubbmästerskap 2024/25 är årets stora tävling på Golfklubb Horizon där medlemmar tävlar om titeln
+                    som
+                    klubbmästare - häng med!</p>
+                <img src="../media/golf.jpg" alt="Man som svingar en golfklubba"
+                    aria-label="Man som svingar en golfklubba">
+                <a href="../html/nyheter.html" class="btn">Se alla nyheter</a>
+
+
+            </article>
+            <hr>
+
+            <article class="new">
+                <h3>Vår restaurang meny</h3>
+                <p>Kom och upptäck våra nya rätter! En perfekt avslutning efter en golfrunda.</p>
+                <img src="../media/food.jpg" alt="En gaffel med spaghetti och en körsbärstomat"
+                    aria-label="En gaffel med spaghetti och en körsbärstomat">
+                <a href="../html/lunch-meny.html" class="btn">Läs mer om vårt utbud</a>
+            </article>
+            <hr>
+
+            <article class="new">
+                <h3>Öppettider</h3>
+                <p>Från och med 1 november ändrar vi våra öppettider för vintersäsongen. Vänligen besök vår
+                    kontaktsektion
+                    för mer
+                    information. <br> <br> Våra öppettider</p>
+
+                <ul>
+                    <li>Mån - Tors: 08:00 - 18:00</li>
+                    <li>Fre - Sön: 08:00 - 19:00</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-logo">
+            <img src="../media/logo-center.png"
+                alt="Logotypen visar två korsade golfklubbor med en golfboll och texten 'GOLFKLUBB HORIZON' samt slogans 'PERFECTION' och 'SWING'.">
+        </div>
+
+        <div class="footer-text">
+            <p>©️ 2024 Golfklubb - Horizon.</p>
+        </div>
+
+        <div class="footer-btn">
+            <a href="#" title="Rulla till toppen">&#11165;</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+    <script>
+        const menu = document.querySelector('.menu');
+        menu.addEventListener('click', function () {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+
+
+</html>

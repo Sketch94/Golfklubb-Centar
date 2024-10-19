@@ -1,3 +1,139 @@
-<!-- Klubbens historia och vision.
-Information om banan och faciliteter.
-Medlemskap och förmåner. -->
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../media/about.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/om-oss.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <title>Om oss</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Om oss</h1>
+    </header>
+
+    <nav>
+        <div class="menu" onclick="toggleMenu()">
+            <div class="top"></div>
+            <div class="middle"></div>
+            <div class="bottom"></div>
+        </div>
+
+        <div class="dropdown-content" id="menu">
+            <ul>
+                <li><a href="../html/index.html">Start</a></li>
+                <li><a href="../html/om-oss.html">Om oss</a></li>
+                <li><a href="../html/boka.html">Boka tid</a></li>
+                <li><a href="../html/medlem.html">Medlem</a></li>
+                <li><a href="../html/restaurang-shop.html">Restaurang & Shop</a></li>
+                <li><a href="../html/tavlingar.html">Tävlingar</a></li>
+                <li><a href="../html/kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="about-header">
+        <div class="about-us">
+            <img src="../media/about-header.jpg" alt="Stor öppen golfbana med golfklubba och boll">
+        </div>
+    </section>
+
+    <section id="about">
+        <h3>Golfklubb Horizon</h3>
+        <p>Golfklubb Horizon är en golfklubb som erbjuder golfbanor för spelare av alla nivåer. Klubben har en lång och
+            känd historia och har under åren byggt upp en stark gemenskap bland våra medlemmar.</p>
+        <p>Vårt mål är att erbjuda ett brett utbud av tävlingar och aktiviteter för golfspelare av alla nivåer.</p>
+    </section>
+    <hr>
+
+    <section id="history-vision">
+        <h3>Klubbbens historia och vision</h3>
+        <p>
+            Golfklubb Horizon startades år 1980 med en vision om att bli en ledande golfklubb i regionen. Med över 40
+            års erfarenhet har klubben utvecklats till att vara en plats för
+            både tävlingsgolfare och fritidsgolfare. Vår vision är att erbjuda en förstklassig golfupplevelse i en
+            vacker och
+            avslappnad miljö.</p>
+    </section>
+
+    <section id="course-info">
+        <h3>Information om bana och faciliteter</h3>
+        <p>Vår bana består av 18 hål och erbjuder utmaningar för golfare på alla nivåer. Banan är designad för att ta
+            tillvara
+            på det naturliga landskapet, och våra faciliteter inkluderar en driving range, ett klubbhus och en golfshop.
+            Vi
+            erbjuder även restaurang och omklädningsrum.</p>
+    </section>
+    <hr>
+
+
+    <section id="about-image-grid">
+        <img src="../media/about1.jpg"
+            alt="Bilden visar en golfbana i solnedgången. I förgrunden syns den välskötta gräsmattan med mjukt rundade kullar, typiska för en golfbana.">
+        <img src="../media/about-2.jpg"
+            alt="En bild visar en silhuett av en person som spelar golf vid solnedgången. Personen är mitt i en golfsving med klubban höjd högt och golfbollen i luften.">
+        <img src="../media/about3.jpg"
+            alt="Bilden visar en golfbana med en grön fairway omgiven av tät grönska. I förgrunden syns några golfspelare på banan, med tre flaggor som är placerade längre bort. ">
+    </section>
+    <br>
+    <br>
+    <hr>
+
+    <section id="membership-info">
+        <h3>Medlemskap och förmåner</h3>
+
+        <p>Som medlem i Golfklubb Horizon får du tillgång till alla våra banor och faciliteter. Du får också rabatter på
+            tävlingar, kurser och i vår shop. Vi erbjuder olika medlemskapsnivåer för att passa både fritidsgolfare och
+            tävlingsgolfare.</p>
+
+        <a href="../html/medlem.html" class="btn">Bli medlem här</a>
+    </section>
+
+
+    <footer>
+        <div class="footer-logo">
+            <img src="../media/logo-center.png"
+                alt="Logotypen visar två korsade golfklubbor med en golfboll och texten 'GOLFKLUBB HORIZON' samt slogans 'PERFECTION' och 'SWING'.">
+        </div>
+
+        <div class="copyright-text">
+            <p>©️ Golfklubb Horizon</p>
+        </div>
+
+        <div class="footer-nav" title="Välkommen!">
+            <p>Adress: Golfgatan 1, 123 45 Golfstaden</p>
+        </div>
+
+        <div class="footer-btn">
+            <a href="#" title="Rulla till toppen">&#11165;</a>
+        </div>
+
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+
+    <script>
+        const menu = document.querySelector('.menu');
+        menu.addEventListener('click', function () {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

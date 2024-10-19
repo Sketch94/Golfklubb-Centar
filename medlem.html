@@ -1,3 +1,329 @@
-<!-- Inloggning för medlemmar.
-Medlemsforum och nyhetsbrev.
-Exklusiva erbjudanden och förmåner. -->
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../media/member-icon.png" type="image/x-icon">
+    <title>Medlemsdashboard - Golfklubb</title>
+    <style>
+        /* Global styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('medlem.jpg');
+            /* Set your background image here */
+            background-size: cover;
+            /* Cover the entire body */
+            background-position: center;
+            /* Center the background image */
+            color: #333;
+            height: 100vh;
+            /* Full height of the viewport */
+            display: flex;
+            /* Use flexbox for layout */
+            flex-direction: column;
+            /* Stack elements vertically */
+        }
+
+        header {
+            background-color: rgba(0, 121, 107, 0.8);
+            /* Slightly transparent header */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        /* Main container */
+        .main-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            /* White background with transparency for main content */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            /* Allow it to take full height */
+        }
+
+        /* Sidebars */
+        .sidebar {
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 0 10px;
+            position: relative;
+            /* For image positioning */
+            overflow: hidden;
+            /* Prevent overflow */
+            transition: transform 0.3s;
+        }
+
+        .sidebar img {
+            width: 100%;
+            height: 100px;
+            /* Set fixed height */
+            object-fit: cover;
+            /* Maintain aspect ratio */
+            border-radius: 10px;
+            /* Round corners */
+        }
+
+        .sidebar:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+            /* Show pointer on hover */
+        }
+
+        .sidebar:nth-child(1) {
+            background-color: #e0f7fa;
+            /* Light cyan for left sidebar */
+        }
+
+        .sidebar:nth-child(3) {
+            background-color: #ffe0b2;
+            /* Light amber for right sidebar */
+        }
+
+        /* Main content container */
+        .content {
+            flex: 1;
+            /* Take remaining space */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Card container */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Card styles */
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            /* Show pointer on hover */
+            position: relative;
+            /* For image positioning */
+            overflow: hidden;
+            /* Prevent overflow */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Ensure content is spaced */
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            /* Set fixed height */
+            object-fit: cover;
+            /* Maintain aspect ratio */
+            border-radius: 10px;
+            /* Round corners */
+        }
+
+        /* Card colors */
+        .card:nth-child(1) {
+            background-color: #ffccbc;
+            /* Light orange */
+        }
+
+        .card:nth-child(2) {
+            background-color: #bbdefb;
+            /* Light blue */
+        }
+
+        .card:nth-child(3) {
+            background-color: #c8e6c9;
+            /* Light green */
+        }
+
+        .card:nth-child(4) {
+            background-color: #ffe082;
+            /* Light yellow */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button styles */
+        .btn {
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 10px;
+            /* Space between text and button */
+        }
+
+        .btn:hover {
+            background-color: #4cae4c;
+            transform: scale(1.05);
+        }
+
+        /* New "Köp Nu" button styles */
+        .buy-btn {
+            padding: 10px;
+            background-color: #ff5722;
+            /* Orange color for the buy button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 10px;
+            /* Space between text and button */
+        }
+
+        .buy-btn:hover {
+            background-color: #e64a19;
+            /* Darker orange on hover */
+            transform: scale(1.05);
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #00796b;
+            color: white;
+            position: relative;
+            margin-top: 20px;
+            /* Space from content above */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            header {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .btn,
+            .buy-btn {
+                font-size: 0.9rem;
+            }
+
+            .sidebar {
+                width: 150px;
+                /* Reduce sidebar width on smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Medlemsdashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="../html/index.html">Hem</a></li>
+                <li><a href="../html/login.html">Profil</a></li>
+                <li><a href="../html/medlem.html">Logga ut</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <img src="../media/discountgolf.webp" alt="Rabatt på Golf Tillbehör"> <!-- Replace with your image -->
+            <h3>Rabatt på Golf Tillbehör</h3>
+            <p>Få fantastiska rabatter på golfklubbor, bollar och tillbehör!</p>
+            <button class="buy-btn">Köp Nu</button> <!-- New button added -->
+        </aside>
+
+        <!-- Main Content -->
+        <div class="content">
+            <section class="card-container">
+                <!-- Nyheter Card -->
+                <article class="card">
+                    <img src="../media/nyheter.avif" alt="Nyheter"> <!-- Replace with your image -->
+                    <h2>Nyheter</h2>
+                    <p>Håll dig uppdaterad med de senaste nyheterna från golfklubben. Läs om kommande evenemang och
+                        uppdateringar!</p>
+                    <button class="btn">Läs Mer</button>
+                </article>
+
+                <!-- Erbjudanden Card -->
+                <article class="card">
+                    <img src="../media/offer" alt="Erbjudanden"> <!-- Replace with your image -->
+                    <h2>Erbjudanden</h2>
+                    <p>Som medlem får du tillgång till exklusiva erbjudanden och rabatter. Ta del av våra senaste
+                        erbjudanden!</p>
+                    <button class="btn">Se Erbjudanden</button>
+                </article>
+
+                <!-- Evenemang Card -->
+                <article class="card">
+                    <img src="../media/evenemang.jpg" alt="Evenemang"> <!-- Replace with your image -->
+                    <h2>Evenemang</h2>
+                    <p>Delta i våra kommande evenemang och tävlingar. Håll dig aktiv och träffa andra golfentusiaster!
+                    </p>
+                    <button class="btn">Anmäl dig</button>
+                </article>
+
+                <!-- Medlemsforum Card -->
+                <article class="card">
+                    <img src="../media/golfforum.jpg" alt="Medlemsforum"> <!-- Replace with your image -->
+                    <h2>Medlemsforum</h2>
+                    <p>Gå med i diskussioner med andra medlemmar. Ställ frågor och dela erfarenheter.</p>
+                    <button class="btn">Gå till Forum</button>
+                </article>
+            </section>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar">
+            <img src="../media/clothdiscount.webp" alt="Rabatt på Sport Kläder"> <!-- Replace with your image -->
+            <h3>Rabatt på Sport Kläder</h3>
+            <p>Upptäck de senaste trenderna inom sportkläder med fantastiska rabatter!</p>
+            <button class="buy-btn">Köp Nu</button> <!-- New button added -->
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2024 Golfklubben. Alla rättigheter förbehållna.</p>
+    </footer>
+</body>
+
+</html>

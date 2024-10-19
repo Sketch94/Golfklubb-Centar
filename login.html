@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Välkommen till Golfklubben - Medlemsområde</title>
+    <link rel="stylesheet" href="../css/medlem.css"> <!-- Link to CSS file -->
+    <link rel="icon" href="../media/login-icon.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="background">
+        <div class="overlay">
+            <h1>Välkommen till Golfklubben!</h1>
+            <p>Är du redan medlem? Logga in för att njuta av alla erbjudanden och nyheter!</p>
+            <p>Om du är ny, tveka inte att påbörja en ny spännande och utmanande resa med oss!</p>
+
+            <div class="form-container">
+                <button class="toggle-btn" id="loginBtn">Logga in</button>
+                <button class="toggle-btn" id="registerBtn">Registrera dig</button>
+
+                <form id="loginForm" class="form">
+                    <input type="text" placeholder="Användarnamn" required>
+                    <input type="password" placeholder="Lösenord" required>
+                    <button type="submit" class="btn">Logga in</button>
+                </form>
+
+                <form id="registerForm" class="form hidden">
+                    <input type="text" placeholder="Fullständigt namn" required>
+                    <input type="email" placeholder="E-post" required>
+                    <input type="tel" placeholder="Telefonnummer" required>
+                    <input type="password" placeholder="Lösenord" required>
+                    <button type="submit" class="btn">Registrera dig</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+body {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #102e20;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+}
+
+/* Om oss rubrik */
+header {
+    background: rgb(133, 165, 133);
+    font-size: 2.5em;
+    text-align: center;
+    color: rgb(29, 71, 29);
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+/* omslagsbild  */
+.about-header {
+    margin-bottom: -150px;
+}
+
+.about-header img {
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    margin-bottom: -5px;
+}
+
+#about,
+#history-vision,
+#course-info,
+#membership-info {
+    color: white;
+    padding: 30px;
+    margin-top: -50px;
+    text-align: center;
+}
+
+#about-image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    justify-items: center;
+    gap: 50px;
+    padding: 15px;
+    margin-bottom: -20px;
+}
+
+#about-image-grid img {
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+}
+
+#membership-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+#membership-info .btn {
+    padding: 15px;
+    background-color: #008cba;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 400;
+    transition: transform 0.4s ease-in-out, background-color 0.4s ease;
+}
+
+#membership-info .btn:hover {
+    transform: scale(1.2);
+    background-color: #007bff;
+}
+
+.menu {
+    flex-direction: column;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    width: 30px;
+}
+
+.menu .top,
+.middle,
+.bottom {
+    height: 4px;
+    width: 100%;
+    background-color: hsl(205.71, 6.19%, 55.69%);
+    margin: 4px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu.active .top {
+    transform: translateY(7px) rotate(45deg)
+}
+
+.menu.active .middle {
+    opacity: 0;
+}
+
+.menu.active .bottom {
+    transform: translateY(-16px) rotate(-45deg)
+}
+
+.dropdown-content {
+    display: none;
+    background-color: inherit;
+    position: absolute;
+    min-height: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .2);
+    z-index: 1;
+    text-align: center;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    display: flex;
+    align-items: end;
+    /* Centrerar elementen vertikalt */
+    justify-content: space-between;
+    background-color: #2C2424;
+    /* Bakgrundsfärg för footern */
+    color: #b0b0b0;
+    /* Färg för footern */
+}
+
+.footer-logo {
+    background-color: #b0b0b0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.footer-logo img {
+    width: 250px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footer-btn {
+    margin: 15px 25px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    background-color: #b0b0b0;
+    opacity: 0.8;
+}
+
+.footer-btn:hover {
+    background-color: #818181;
+    cursor: pointer;
+}
+
+.footer-btn a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-nav:hover {
+    color: #818181;
+    cursor: pointer;
+}
+
+hr {
+    width: 100%;
+    text-decoration-thickness: 5em;
+    background-color: rgba(255, 255, 255, 0.432);
+    margin-top: -20px;
+    margin-bottom: 15px;
+    border: none;
+    height: 5px;
+}
+
+@media (max-width: 960px) {
+
+    .about-header {
+        margin-top: 10px;
+    }
+
+    .about-header img {
+        width: 100%
+    }
+
+    #about {
+        margin-top: 120px;
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: absolute;
+        min-width: 100%;
+    }
+
+    .dropdown-content a:hover {
+        color: rgba(128, 128, 128, 0.678);
+    }
+
+    .dropdown-content.show {
+        display: block;
+        position: relative;
+    }
+
+    #about-image-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr)
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+
+        .footer-logo {
+            max-width: 50%;
+            align-items: center;
+            border-bottom-left-radius: 10px;
+        }
+
+        .copyright-text {
+            order: 4;
+        }
+
+        .footer-nav {
+            order: 3;
+        }
+    }
+
+}
+
+/* Länkar i rad för skärmar 961px och större */
+@media (min-width: 961px) {
+
+    .about-header {
+        margin-top: 70px;
+    }
+
+    #about {
+        margin-top: 120px;
+    }
+
+    header {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .dropdown-content {
+        display: inline-block;
+        /* Gör varje länk till inline-block (lägger länkarna i rad) */
+        width: 100%;
+        /* Navigationsmenyn tar upp hela fönstrets bredd */
+        background-color: inherit;
+        /* Ärver bakgrundsfärgen från body (#102e20); */
+        box-shadow: none;
+    }
+
+    .dropdown-content a {
+        color: white;
+    }
+
+    #about-image-grid img {
+        width: 300px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+
+    .about-header {
+        margin-top: 150px;
+    }
+
+    #about {
+        margin-top: 100px;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+
+    nav ul li a {
+        font-size: xx-large;
+        border-bottom: solid transparent;
+        border-top: solid transparent;
+    }
+
+    nav ul li a:hover {
+        border-bottom: white solid;
+        border-top: white solid;
+    }
+
+    #about-image-grid img {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,86 @@
+body {
+    background: linear-gradient(to bottom, #a8d8b9, #3b3c36);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    color: wheat
+}
+
+#winter-h3 {
+    margin-left: 10px;
+}
+
+#autumn-h3 {
+    text-align: end;
+    margin-right: 10px;
+}
+
+#member-h3 {
+    text-align: center;
+}
+
+.news-container {
+    width: 100%;
+}
+
+.content-winter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.content-winter img,
+.content-autumn img {
+    width: 300px;
+    border-radius: 5px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.content-winter p {
+    flex: 1;
+}
+
+.content-autumn {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+
+.content-autumn p {
+    flex: 1;
+    padding: 5px;
+}
+
+.content-member img {
+    width: 100%;
+    background-position: center;
+    height: 50vh;
+    border-radius: 10px;
+    margin-bottom: -160px;
+}
+
+.content-member p {
+    text-align: center;
+}
+
+p a {
+    text-decoration: none;
+    color: wheat
+}
+
+p a:hover {
+    color: #a8d8b9;
+}
